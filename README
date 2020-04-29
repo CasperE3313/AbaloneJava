@@ -1,0 +1,98 @@
+Thank you for downloading our software.
+Take the following steps to successfully start.
+
+
+Create a new java project by right clicking on an empty space in the Package Explorer. Select new -> Java Project
+
+Give a desired project name, and click finish (Use default options, and don't create a module).
+
+Right click on the 'src' folder in your newly created Java Project and import the file system 'src', 
+	located in the folder AbaloneOther3.6, after extracting the ZIP file.
+			
+The tests package still shows errors since we still have to import JUnit5.	
+	
+Right click your newly created project, and select properties.
+
+Go to 'java build path' in the left bar, and select 'Libraries'.
+	
+	Click on 'Add library'
+	Select 'JUnit' 
+	Click on next.
+	Select 'JUnit5' as version.
+	Click finish. 
+	Apply and close.
+	
+The source folder should now contain no errors, and the code can be run.
+
+
+
+
+
+How to connect the server and the client:
+
+
+Run the Server.java class in package 'server', and give a port number like '5656'.
+
+Run the Client.java class in the same package. Should you play on 1 machine, 
+	give "localhost" as IP address, and enter the same port number specified before.
+
+**Player input will always be typed in the Client console.**
+
+Send the protocol handshake in the client class to the server, which is 'h;other3V1.3'
+
+*IMPORTANT* You have to manually flush the outputstream to receive messages, hence, press the 'enter' button multiple times to receive the correct
+	message from the server.
+
+You will now receive a message from the server saying "What would you like to do?, 
+	Type help for the help menu".
+
+
+Send "help" to the server to read what you could do, we will also briefly discuss some points here.
+
+
+
+
+
+
+How to join a lobby when you've succesfully made connection:
+
+"j;<lobbyname>;<playername>;<teamname>" for example, "j;lobby3;peter;teamcool"
+
+On another Client, also join the lobby with the same command (max 4 clients per lobby).
+	(Hence, take the steps mentioned as before for the Client class)
+
+
+
+
+
+
+How to start a game:
+
+For a lobby of size 2 - 4, each client sends "r" to the server.
+The last client to send "r" will trigger the game to start.
+For a lobby of size 1, you'll play against an AI. Type "r;smart" or "r;naive", depending against which type of AI you would like to play against.
+
+
+
+
+How to make a move:
+
+When it's your turn, you can move your marbles via "m;<coordinates of marble 1>;<coordinates of marble 2>;<destination of marble 1>"
+For 2 and 3 marbles: insert the front marble, and back marble.
+For 1 marble: insert the same marble twice.
+
+For example: "m;i5;g5;h5", given that your marbles are here, and can move in said direction.
+
+Keep playing the game until one player wins or results in a draw.
+
+Have fun!
+
+
+
+
+
+
+
+
+
+
